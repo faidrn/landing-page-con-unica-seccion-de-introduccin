@@ -1,0 +1,384 @@
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --white: #FFFFFF;
+    --background-mobile: url(../images/bg-mobile.svg);
+    --background-desktop: url(../images/bg-desktop.svg);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--violet);
+    font-family: 'Open Sans', sans-serif;
+    background-image: var(--background-desktop); /*the background is desktop when the viewport is 768px or bigger*/
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;  /*centrado vertical*/
+    align-items: center;  /*centado horizontal*/
+    height: 100%;
+}
+
+header{
+    width: 50%;
+    height: 10vh;
+    position: absolute;
+    top: 35px;
+    left: 55px;
+}
+
+.container-image{
+    width: 150%;
+    margin-top: 120px;
+    margin-left: 70px;
+}
+
+.container-image img{
+    width: 100%;
+    height: 70vh;
+}
+
+.container-text{
+    width: 130%;
+    margin-left: 40px;
+    margin-right: 70px;
+}
+
+.container-text h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+}
+
+.title{
+    margin-bottom: 20px;
+}
+
+.container-text p{
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--white);
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.button{
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    color: var(--violet);
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    width: 40%;
+    height: 50px;
+    border: 1px solid var(--white);
+    font-size: 24px;
+    border-radius: 50px;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.75);
+}
+
+footer{
+    display: flex;
+    justify-content: center; /*centrado vertical*/
+    float: right;
+    margin-right: 65px;
+}
+
+.social-network{
+    margin-right: 0;
+}
+
+.twitter{
+    margin: 0 27px 0 27px;
+    
+}
+
+
+
+@media screen and (max-width: 768px) {
+    header{
+        width: 80%;
+        height: 8vh;
+        margin-top: -10px;
+    }
+     
+    .logo{
+        margin-left: 0px;
+        width: 47%;
+    }
+    body {
+        background-repeat: no-repeat;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    .container-image{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        margin-top: 105px;
+        margin-left: 0px;
+    }
+
+    .container-image img{
+        width: 85%;
+        height: 50vh;
+    }
+
+    .container-text{
+        margin-top: 15px;
+        display: grid;
+        place-items: center;
+    }
+
+    .title{
+        font-weight: bold;  
+        font-size: 42px;
+        width: 60%;
+        margin-left: 10px;
+    }
+
+    .container-text p{
+        margin-top: -10px;
+        font-size: 32px;
+        max-width: 70%;
+        margin-left: 25px;
+    }
+
+    .button{
+        margin-top: 25px;
+        width: 30%;
+        height: 55px;
+        border: 1px solid var(--white);
+        font-size: 30px;
+        border-radius: 50px;
+        box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.75);
+        margin-bottom: 25px;
+    }
+
+      .social-network{
+          position: absolute;
+          left: 33%;
+      }
+
+      .facebook{
+          width: 55px;
+      }
+
+      .twitter{
+          margin: 0 27px 0 27px;
+          width: 55px;
+      }
+
+      .instagram{
+          width: 52px;
+      }
+  }
+
+@media screen and (max-width: 540px) {
+    header{
+        margin-top: -15px;
+    }
+    .logo{
+        margin-left: 0px;
+    }
+    body {
+        background-image: var(--background-mobile); /*the background is mobile when the viewport is 540px or smaller*/
+        background-position-x: center;
+        background-repeat: no-repeat;
+    }
+
+    .container-image{
+        margin-top: 70px;
+    }
+
+    .container-image img{
+        max-width: 80%;
+    }
+
+    .container-text{
+        margin-top: 18px;
+    }
+
+    .title{
+        font-size: 26px;
+    }
+
+    .container-text p{
+        margin-top: -10px;
+        font-size: 20px;
+        width: 90%;
+    }
+
+    .button{
+        margin-top: 5px;
+        width: 40%;
+        height: 40px;
+        font-size: 20px;
+    }
+
+      .social-network{
+         margin-left: -20px;
+      }
+
+      .facebook{
+          width: 45px;
+      }
+
+      .twitter{
+          margin: 0 25px 0 25px;
+          width: 45px;
+      }
+
+      .instagram{
+          width: 42px;
+      }
+  }
+
+  @media screen and (max-width: 414px) {
+    header{
+        height: 7vh;
+        margin-top: -10px;
+        margin-left: -17px;
+    }
+    .logo{
+        margin-left: 0px;
+        width: 60%;
+    }
+
+    .container-image{
+        margin-top: 85px;
+    }
+
+    .container-image img{
+        width: 80%;
+        height: 35vh;
+    }
+
+    .title{
+        width: 65%;
+        margin-left: 20px;
+    }
+
+    .container-text p{
+        width: 65%;
+        margin-left: 27px;
+    }
+
+    .button{
+        margin-left: 40px;
+    }
+
+    footer{
+        margin-top: 5px;
+    }
+      .social-network{
+          display: flex;
+          justify-content: center; /*centrado vertical*/
+          flex-direction:row;
+          margin-left: 5px;
+      }
+
+      .facebook{
+          width: 35px;
+      }
+
+      .twitter{
+          margin: 0 15px 0 15px;
+          width: 35px;
+      }
+
+      .instagram{
+          width: 33px;
+      }
+  }
+
+  @media screen and (max-width: 375px) {
+    header{
+        margin-top: 10px;
+    }
+
+    .logo{
+        margin-left: 0px;
+        width: 55%;
+    }
+
+    .container-image{
+        margin-top: 100px;
+    }
+
+    .title{
+        font-size: 28px;
+    }
+
+    .container-text p{
+        font-size: 17px;
+    }
+
+    .button{
+        margin-left: 30px;
+    }
+
+      .social-network{
+        margin-left: -5px;
+      }
+
+      .facebook{
+          margin: 7px;
+          width: 70%;
+      }
+
+      .twitter{
+          margin: 7px;
+          width: 70%;
+      }
+
+      .instagram{
+          margin: 7px;
+          width: 30px;
+      }
+  }
+
+  @media screen and (max-width: 280px) {
+    header{
+        height: 7vh;
+        margin-top: 25px;
+        position: static;
+    }
+
+    .logo{
+        margin-left: 0px;
+        width: 55%;
+    }
+
+    .container-image{
+        margin-top: 0px;
+    }
+
+    .container-image img{
+        height: 30vh;
+    }
+
+    .container-text{
+        margin-top: 20px;
+    }
+
+    .title{
+        font-size: 24px;
+        margin-left: 30px;
+    }
+
+      .social-network{
+        margin-top: -10px;
+        margin-left: -20px;
+      }
+  }
